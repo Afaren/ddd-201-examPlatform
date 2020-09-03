@@ -2,10 +2,12 @@ package exam.paperContext.domain.model.blankQuiz;
 
 import exam.paperContext.shared.Entity;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+@ToString
 @Getter
 public class BlankQuiz implements Entity<BlankQuiz> {
     private final BlankQuizId blankQuizId;
@@ -38,7 +40,7 @@ public class BlankQuiz implements Entity<BlankQuiz> {
                                    String teacherId,
                                    String content,
                                    String referenceAnswer,
-                                   int score) {
+                                   Integer score) {
         return new BlankQuiz(blankQuizId, teacherId, content, referenceAnswer, score);
     }
 
